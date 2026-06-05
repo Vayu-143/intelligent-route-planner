@@ -198,73 +198,34 @@ if st.button(
     )
 
     # --------------------------------------------
-    # Graph Visualization
-    # --------------------------------------------
+# Graph Visualization
+# --------------------------------------------
 
-    st.subheader(
-        "📈 Route Visualization"
-    )
+st.subheader(
+    "📈 Route Visualization"
+)
 
-    image_path = (
-        "outputs/optimized_route.png"
-    )
-
-    if os.path.exists(
-        image_path
-    ):
-
-        st.image(
-            image_path,
-            caption=
-            "Shortest Path Visualization",
-            use_container_width=True
-        )
-
-    else:
-
-        st.warning(
-            "Visualization image not found."
-        )
+st.image(
+    f"{API_URL}/visualization",
+    caption="Shortest Path Visualization",
+    use_container_width=True
+)
 
     # --------------------------------------------
-    # PDF Download
-    # --------------------------------------------
+# PDF Download
+# --------------------------------------------
 
-    st.subheader(
-        "📄 Download Report"
-    )
+st.subheader(
+    "📄 Download Report"
+)
 
-    pdf_path = (
-        "outputs/route_report.pdf"
-    )
+pdf_url = (
+    f"{API_URL}/report"
+)
 
-    if os.path.exists(
-        pdf_path
-    ):
-
-        with open(
-            pdf_path,
-            "rb"
-        ) as pdf_file:
-
-            st.download_button(
-                label=
-                "⬇ Download PDF Report",
-
-                data=pdf_file,
-
-                file_name=
-                "route_report.pdf",
-
-                mime=
-                "application/pdf"
-            )
-
-    else:
-
-        st.warning(
-            "PDF report not found."
-        )
+st.markdown(
+    f"[⬇ Download PDF Report]({pdf_url})"
+)
 
 # ------------------------------------------------
 # Footer

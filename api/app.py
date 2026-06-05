@@ -16,6 +16,7 @@ from src.reports.report_generator import (
 )
 
 from api.schemas import RouteRequest
+from fastapi.responses import FileResponse
 
 app = FastAPI(
     title="Intelligent Route Planner API",
@@ -242,7 +243,32 @@ def astar_route(
         "astar"
     )
 
+# --------------------------------------------------
+# VISUALIZATION
+# --------------------------------------------------
 
+@app.get("/visualization")
+def visualization():
+
+    return FileResponse(
+        "outputs/optimized_route.png",
+        media_type="image/png"
+    )
+
+
+# --------------------------------------------------
+# PDF REPORT
+# --------------------------------------------------
+
+@app.get("/report")
+def report():
+
+    return FileResponse(
+        "outputs/route_report.pdf",
+        media_type="application/pdf",
+        filename="route_report.pdf"
+    )
+    
 # --------------------------------------------------
 # HEALTH
 # --------------------------------------------------
