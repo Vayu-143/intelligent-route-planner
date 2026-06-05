@@ -1,0 +1,34 @@
+{
+  "roads": [
+
+    ["Kempegowda Airport","Hebbal",18],
+
+    ["Hebbal","Yeshwanthpur",7],
+
+    ["Yeshwanthpur","Majestic",5],
+
+    ["Majestic","MG Road",4],
+
+    ["MG Road","Indiranagar",5],
+
+    ["Indiranagar","Whitefield",12],
+
+    ["Whitefield","Electronic City",20],
+
+    ["Electronic City","Koramangala",8],
+
+    ["Koramangala","MG Road",6],
+
+    ["Koramangala","Jayanagar",5],
+
+    ["Jayanagar","Banashankari",4],
+
+    ["Banashankari","Majestic",8],
+
+    ["Hebbal","Manyata Tech Park",3],
+
+    ["Manyata Tech Park","MG Road",10],
+
+    ["Whitefield","Manyata Tech Park",14]
+  ]
+}

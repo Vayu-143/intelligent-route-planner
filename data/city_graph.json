@@ -1,0 +1,9 @@
+{
+  "roads": [
+    ["Home", "Mall", 2],
+    ["Mall", "Office", 3],
+    ["Office", "School", 5],
+    ["Home", "School", 4],
+    ["Airport", "Office", 6]
+  ]
+}

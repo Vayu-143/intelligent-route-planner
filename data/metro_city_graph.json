@@ -1,0 +1,12 @@
+{
+  "roads": [
+    ["Delhi Airport", "Connaught Place", 12],
+    ["Connaught Place", "India Gate", 3],
+    ["India Gate", "AIIMS", 5],
+    ["AIIMS", "Nehru Place", 4],
+    ["Nehru Place", "Noida Sector 18", 8],
+    ["Noida Sector 18", "Botanical Garden", 2],
+    ["Botanical Garden", "Akshardham", 6],
+    ["Akshardham", "Delhi Airport", 15]
+  ]
+}
