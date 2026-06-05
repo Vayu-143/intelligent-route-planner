@@ -5,4 +5,5 @@ requests
 networkx
 matplotlib
 reportlab
-pytest
+pandas
+pydantic
