@@ -17,6 +17,7 @@ from src.reports.report_generator import (
 
 from api.schemas import RouteRequest
 from fastapi.responses import FileResponse
+import os
 
 app = FastAPI(
     title="Intelligent Route Planner API",
@@ -250,8 +251,16 @@ def astar_route(
 @app.get("/visualization")
 def visualization():
 
+    image_path = "outputs/optimized_route.png"
+
+    if not os.path.exists(image_path):
+        raise HTTPException(
+            status_code=404,
+            detail="Visualization not generated yet"
+        )
+
     return FileResponse(
-        "outputs/optimized_route.png",
+        image_path,
         media_type="image/png"
     )
 
@@ -263,8 +272,16 @@ def visualization():
 @app.get("/report")
 def report():
 
+    pdf_path = "outputs/route_report.pdf"
+
+    if not os.path.exists(pdf_path):
+        raise HTTPException(
+            status_code=404,
+            detail="Report not generated yet"
+        )
+
     return FileResponse(
-        "outputs/route_report.pdf",
+        pdf_path,
         media_type="application/pdf",
         filename="route_report.pdf"
     )
