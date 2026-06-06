@@ -205,10 +205,21 @@ st.subheader(
     "📈 Route Visualization"
 )
 
+import time
+
+image_url = (
+    f"{API_URL}/visualization"
+    f"?city={selected_city}"
+    f"&ts={int(time.time())}"
+)
+
 st.image(
-    f"{API_URL}/visualization",
+    image_url,
     caption="Shortest Path Visualization",
     use_container_width=True
+)
+caption="Shortest Path Visualization",
+use_container_width=True
 )
 
     # --------------------------------------------
